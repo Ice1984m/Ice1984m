@@ -1,1 +1,192 @@
-workspace
+print("Hello, World!") $ pyton print("Hello, World!")
+bash: syntax error near unexpected token `"Hello, World!"'
+~/downloads $ import requests
+AINS)
+
+def search_bing(query, num_results=10):
+    url = f"https://www.bing.com/search?q={query.replace(' ', '+')}&count={num_results}"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.text, "html.parser")
+    results = []
+    for item in soup.find_all('li', {'class': 'b_algo'}):
+        link = item.find('a', href=True)
+        if link and not is_mozilla(link['href']):
+            results.append(link['href'])
+    return results
+
+def fetch_and_save_results():
+    print(f"Zoeken naar '{KEYWORD}' (behalve Mozilla-gerelateerde bronnen)...")
+    results = search_bing(KEYWORD)
+    found = []
+    for url in results:
+        try:
+            content = requests.get(url, timeout=5).text
+            if not is_mozilla(url):
+                found.append(f"URL: {url}\n---\n{content>     main()_ == "__main__":save_results()ernet search v
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+No command No found, did you mean:
+ Command go in package golang
+ Command jo in package jo
+ Command o in package o-editor
+ Command co in package rcs
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+No command No found, did you mean:
+ Command go in package golang
+ Command jo in package jo
+ Command o in package o-editor
+ Command co in package rcs
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+No command No found, did you mean:
+ Command go in package golang
+ Command jo in package jo
+ Command o in package o-editor
+ Command co in package rcs
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: command substitution: line 2: unexpected EOF while looking for matching `''
+No command bash: found, did you mean:
+ Command bash in package bash
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+bash: syntax error near unexpected token `('
+bash: command substitution: line 2: unexpected EOF while looking for matching `''
+No command bash: found, did you mean:
+ Command bash in package bash
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+No command No found, did you mean:
+ Command go in package golang
+ Command jo in package jo
+ Command o in package o-editor
+ Command co in package rcs
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: command substitution: line 1: unexpected EOF while looking for matching `''
+No command bash: found, did you mean:
+ Command bash in package bash
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+bash: syntax error near unexpected token `('
+bash: command substitution: line 1: unexpected EOF while looking for matching `''
+No command bash: found, did you mean:
+ Command bash in package bash
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+No command No found, did you mean:
+ Command go in package golang
+ Command jo in package jo
+ Command o in package o-editor
+ Command co in package rcs
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+No command Command found, did you mean:
+ Command comsatd in package mailutils
+ Command w3mman in package w3m
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+bash: syntax error near unexpected token `('
+bash: command substitution: line 1: unexpected EOF while looking for matching `''
+No command bash: found, did you mean:
+ Command bash in package bash
+bash: syntax error near unexpected token `('
+bash: command substitution: line 1: unexpected EOF while looking for matching `''
+No command bash: found, did you mean:
+ Command bash in package bash
+/data/data/com.termux/files/home/downloads: /data/data/com.termux/files/home/downloads: Is a directory
+bash: syntax error near unexpected token `('
+> run
+> print("Hello, World!")
+bash: syntax error near unexpected token `"Hello, World!"'
+~/downloads $ import requests
+AINS)
+
+def search_bing(query, num_results=10):
+    url = f"https://www.bing.com/search?q={query.replace(' ', '+')}&count={num_results}"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.text, "html.parser")
+    results = []
+    for item in soup.find_all('li', {'class': 'b_algo'}):
+        link = item.find('a', href=True)
+        if link and not is_mozilla(link['href']):
+            results.append(link['href'])
+    return results
+
+def fetch_and_save_results():
+    print(f"Zoeken naar '{KEYWORD}' (behalve Mozilla-gerelateerde bronnen)...")
+    results = search_bing(KEYWORD)
+    found = []
+    for url in results:
+        try:
+            content = requests.get(url, timeout=5).text
+            if not is_mozilla(url):
+                found.append(f"URL: {url}\n---\n{content>
