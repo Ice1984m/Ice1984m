@@ -1,0 +1,67 @@
+import requests
+from bs4 import BeautifulSoup
+
+KEYWORD = "Matty Moors"
+EXCLUDE_DOMAINS = ["mozilla.org", "firefox.com"]
+OUTPUT_FILE = "results.txt"
+
+def is_mozilla(url):
+    return any(domain in url for domain in EXCLUDE_DOMAINS)
+
+def search_bing(query, num_results=10):
+    url = f"https://www.bing.com/search?q={query.replace(' ', '+')}&count={num_results}"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.text, "html.parser")
+    results = []
+    for item in soup.find_all('li', {'class': 'b_algo'}):
+        link = item.find('a', href=True)
+        if link and not is_mozilla(link['href']):
+            results.append(link['href'])
+    return results
+
+def fetch_and_save_results():
+    print(f"Zoeken naar '{KEYWORD}' (behalve Mozilla-gerelateerde bronnen)...")
+    results = search_bing(KEYWORD)
+    found = []
+    for url in results:
+        try:
+            content = requests.get(url, timeout=5).text
+            if not is_mozilla(url):
+                found.append(f"URL: {url}\n---\n{content[:500]}\n===\n")
+        except Exception as e:
+            print(f"Fout bij ophalen {url}: {e}")
+
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        for entry in found:
+            f.write(entry + "\n")
+
+    print(f"Klaar! Resultaten zijn opgeslagen in {OUTPUT_FILE}")
+
+def get_repo_info(repo):
+    url = f"https://api.github.com/repos/{repo}"
+    response = requests.get(url)
+    return response.json()
+
+def get_issues(repo):
+    url = f"https://api.github.com/repos/{repo}/issues"
+    response = requests.get(url)
+    return response.json()
+
+def main():
+    # GitHub repo info ophalen (alleen-lezen)
+    REPO = "Ice1984m/Ice1984m"
+    print("Repo info ophalen...")
+    info = get_repo_info(REPO)
+    print(info)
+
+    print("\nOpen issues ophalen...")
+    issues = get_issues(REPO)
+    for issue in issues:
+        print(f"#{issue['number']} - {issue['title']}")
+
+    # Start automatische internet search voor Matty Moors
+    fetch_and_save_results()
+
+if __name__ == "__main__":
+    main()
